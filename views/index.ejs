@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title> Dixa diseño y construccion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <meta name="description" content="Arquitectura del futuro. Arquitectura Colima">
+
+</head>
+
+<body>
+
+  <%- include('./shared/navbar'); %>
+    
+    <section class="section__slogan">
+      <div class="section__slogan__img">
+        <img src="/images/nav_fon.jpg" alt="">
+      </div>
+      <div class="section__slogan__inf">
+        <p>Arquitectura del futuro</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, neque. Ab pariatur porro aperiam officiis
+          numquam iste perferendis doloribus veritatis molestias quidem vel distinctio, ipsam consectetur, velit
+          mollitia magnam aliquam?</p>
+      </div>
+    </section>
+
+
+   <div class="bannos" id="bannos" >
+    <h1>Baño</h1>
+   </div>
+
+   <div class="cocina" id="cocina" >
+    <h1>Cocina</h1>
+   </div>
+
+   <div class="cuartos" id="cuartos" >
+    <h1>Cuartos</h1>
+   </div>
+
+   <% for( let index = 0; index < datos.length; index++ ) { %>
+    <h2><%= datos[index].title %></h2>
+    <img src="<%= datos[index].image %>" alt="">
+   <% } %>
+
+    <%- include('./shared/footer'); %>
+</body>
+
+</html>
